@@ -84,7 +84,7 @@ public class D extends Thread {
 	public void run() {
 		String[] cadenas;
 		cadenas = new String[numCadenas];
-		
+		long tiempoFinal, tiempoInicial; 
 		String linea;
 	    System.out.println(dlg + "Empezando atencion.");
 	        try {
@@ -143,6 +143,7 @@ public class D extends Thread {
 
 				/***** Fase 4: *****/
 				cadenas[3] = "";
+				tiempoInicial = System.currentTimeMillis();
 				linea = dc.readLine();
 				byte[] llaveSimetrica = S.ad(
 						toByteArray(linea), 
@@ -196,6 +197,7 @@ public class D extends Thread {
 				byte [] hmac = S.hdg(valorByte, simetrica, algoritmos[3]);
 				byte[] recibo = S.ae(hmac, keyPairServidor.getPrivate(), algoritmos[2]);
 				ac.println(toHexString(recibo));
+				tiempoFinal = System.currentTimeMillis();
 				System.out.println(dlg + "envio hmac cifrado con llave privada del servidor. continuado.");
 				
 				cadenas[7] = "";
@@ -212,6 +214,8 @@ public class D extends Thread {
 			    for (int i=0;i<numCadenas;i++) {
 				    escribirMensaje(cadenas[i]);
 			    }
+			    
+			    escribirMensaje("Tiempo de respuesta: " + (tiempoFinal - tiempoInicial));
 	        } catch (Exception e) {
 	          e.printStackTrace();
 	        }
