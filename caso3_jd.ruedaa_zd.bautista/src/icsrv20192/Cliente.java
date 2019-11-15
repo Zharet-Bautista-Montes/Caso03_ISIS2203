@@ -24,7 +24,7 @@ import javax.xml.bind.DatatypeConverter;
 
 import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 
-public class Cliente 
+public class Cliente extends Thread
 {
 	private final static String HOLA = "HOLA";
 	
@@ -58,13 +58,8 @@ public class Cliente
 	
 	private static PublicKey llaveServidor;
 	
-	public static void main(String[] args) 
+	public void run(String address, int port) 
 	{
-		// TODO Auto-generated method stub 
-		System.out.println("Ingrese la dirección a la que quiere conectarse");
-		String address = Iconsole.next();
-		System.out.println("Ingrese el puerto al que quiere conectarse");
-		int port = Iconsole.nextInt();
 		try 
 		{
 			clientSocket = new Socket(address, port);
