@@ -4,9 +4,11 @@ import uniandes.gload.core.*;
 
 public class ClientServerTask extends Task
 {
-	static int ip;
+	private int ip = 0;	
+	private String ha = ""; 
 	
-	static String hostname; 
+	public ClientServerTask(int socketip, String socketha)
+	{ ip = socketip; ha = socketha; }
 
 	@Override
 	public void fail() 
@@ -23,9 +25,9 @@ public class ClientServerTask extends Task
 	@Override
 	public void execute() 
 	{
-		int simalgo = (int) Math.random()*2;
-		int hmacalgo = (int) Math.random()*4 + 3;
+		int simalgo = (int) (Math.random()*2);
+		int hmacalgo = (int) (Math.random()*4 + 3);
 		Cliente client = new Cliente();
-		client.run("localhost", 5386, simalgo, hmacalgo);
+		synchronized (Cliente.class) {client.run(ha, ip, simalgo, hmacalgo);};
 	}
 }

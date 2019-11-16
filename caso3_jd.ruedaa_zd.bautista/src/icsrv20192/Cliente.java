@@ -33,7 +33,7 @@ public class Cliente extends Thread
 	
 	private final static String ALGORITMOS = "ALGORITMOS:";
 	
-	private final static String[] AlgorithmSet = {"AES", "BLOWFISH", "RSA", "HMACSHA1", "HMACSHA256", "HMACSHA384", "HMACSHA512"};
+	private final static String[] AlgorithmSet = {"AES", "Blowfish", "RSA", "HMACSHA1", "HMACSHA256", "HMACSHA384", "HMACSHA512"};
 	
 	private static Socket clientSocket; 
 	

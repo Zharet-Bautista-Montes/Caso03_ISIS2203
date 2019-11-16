@@ -1,14 +1,24 @@
 package icsrv20192;
 
+import java.util.Scanner;
+
 import uniandes.gload.core.*;
 
 public class Generator 
 {
-
 	private LoadGenerator generator;
+	
+	public static int portip;	
+	public static String hostaddress;	
+	public Scanner generatorconfig;
 	
 	public Generator()
 	{
+		generatorconfig = new Scanner(System.in);
+		System.out.println("Ingrese la dirección IP en donde se ubica el servidor");
+		hostaddress = generatorconfig.next();
+		System.out.println("Ingrese el puerto para conectarse al servidor");
+		portip = generatorconfig.nextInt();
 		Task work = createTask(); 
 		int numberOfTasks = 100; 
 		int gapBetweenTasks = 1000;
@@ -18,7 +28,7 @@ public class Generator
 	
 	public Task createTask()
 	{
-		return new ClientServerTask(); 
+		return new ClientServerTask(portip, hostaddress); 
 	}
 	
 	public static void main(String[] args) 
