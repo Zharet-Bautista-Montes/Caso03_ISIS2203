@@ -19,7 +19,7 @@ public class P {
 	private static ServerSocket ss;	
 	private static final String MAESTRO = "MAESTRO: ";
 	private static X509Certificate certSer; /* acceso default */
-	private static KeyPair keyPairServidor; /* acceso default */
+	private static KeyPair keyPairServidor; /* acceso default */ 
 	
 	/**
 	 * @param args
@@ -50,14 +50,13 @@ public class P {
         
         D.init(certSer, keyPairServidor, file);
         
-		// Crea el socket que escucha en el puerto seleccionado.
+		// Crea el socket que escucha en el puerto seleccionado y configura los threads del generador.
 		ss = new ServerSocket(ip);
 		System.out.println(MAESTRO + "Socket creado.");
 		//TODO cambios: añadido 55 a 57, 61 y 66
 		System.out.println(MAESTRO + "Establezca número de threads en el pool:");
 		int poolSize = Integer.parseInt(br.readLine());
 		ExecutorService pool = Executors.newFixedThreadPool(poolSize);
-        
 		for (int i=0;true;i++) {
 			try { 
 				pool.execute(new D(ss.accept(),i));
@@ -69,19 +68,5 @@ public class P {
 				e.printStackTrace();
 			}
 		}
-	}
-	
-	public double getSystemCpuLoad() throws Exception 
-	{
-		 MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
-		 ObjectName name = ObjectName.getInstance("java.lang:type=OperatingSystem");
-		 AttributeList list = mbs.getAttributes(name, new String[]{ "SystemCpuLoad" });
-		 if (list.isEmpty()) return Double.NaN;
-		 Attribute att = (Attribute)list.get(0);
-		 Double value = (Double)att.getValue();
-		 // usually takes a couple of seconds before we get real values
-		 if (value == -1.0) return Double.NaN;
-		 // returns a percentage value with 1 decimal point precision
-		 return ((int)(value * 1000) / 10.0);
 	}
 }
