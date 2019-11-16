@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.management.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 //TODO cambios: comentado import java.net.Socket;
 import java.security.KeyPair;
@@ -50,14 +51,15 @@ public class P {
         
         D.init(certSer, keyPairServidor, file);
         
-		// Crea el socket que escucha en el puerto seleccionado.
+		// Crea el socket que escucha en el puerto seleccionado y configura los threads del generador.
 		ss = new ServerSocket(ip);
+		String host = InetAddress.getLocalHost().getHostName();
+		ClientServerTask.ip = ip; ClientServerTask.hostname = host;
 		System.out.println(MAESTRO + "Socket creado.");
 		//TODO cambios: añadido 55 a 57, 61 y 66
 		System.out.println(MAESTRO + "Establezca número de threads en el pool:");
 		int poolSize = Integer.parseInt(br.readLine());
 		ExecutorService pool = Executors.newFixedThreadPool(poolSize);
-        
 		for (int i=0;true;i++) {
 			try { 
 				pool.execute(new D(ss.accept(),i));

@@ -11,7 +11,6 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
 import java.security.cert.X509Certificate;
-import java.util.Scanner;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -48,8 +47,6 @@ public class Cliente extends Thread
 	
 	private static CertificateFactory CDF;
 	
-	private static Scanner Iconsole = new Scanner(System.in); 
-	
 	private static int simPosition;
 	
 	private static int hmacPosition;
@@ -58,7 +55,7 @@ public class Cliente extends Thread
 	
 	private static PublicKey llaveServidor;
 	
-	public void run(String address, int port) 
+	public void run(String address, int port, int sim, int hmac) 
 	{
 		try 
 		{
@@ -66,6 +63,7 @@ public class Cliente extends Thread
 			auxiliary = clientSocket.getInputStream();
 			clientIn = new BufferedReader(new InputStreamReader(auxiliary));
 			clientOut = new PrintWriter(clientSocket.getOutputStream(), true);
+			simPosition = sim; hmacPosition = hmac;
 			etapa1();
 			etapa2();
 			etapa3();
@@ -80,29 +78,11 @@ public class Cliente extends Thread
 	
 	public static void etapa1() throws Exception
 	{
-		System.out.println("Ingrese el número del algoritmo de cifrado simétrico a proponer: 1. AES o 2. Blowfish");
-		int simalgo = Iconsole.nextInt();
-		while(simalgo < 1 || simalgo > 2)
-		{
-			System.out.println("El valor ingresado no corresponde a las opciones.");
-			System.out.println("Ingrese el número del algoritmo de cifrado simétrico a proponer: 1. AES o 2. Blowfish");
-			simalgo = Iconsole.nextInt();
-		}
-		simPosition = simalgo -1;
-		System.out.println("Ingrese el número del algoritmo HMAC a proponer: 1. SHA1, 2. SHA256, 3. SHA384 o 4. SHA512");
-		int hmacalgo = Iconsole.nextInt();
-		while(hmacalgo < 1 || hmacalgo > 3)
-		{
-			System.out.println("El valor ingresado no corresponde a las opciones.");
-			System.out.println("Ingrese el número del algoritmo HMAC a proponer: 1. SHA1, 2. SHA256, 3. SHA384 o 4. SHA512");
-			hmacalgo = Iconsole.nextInt();
-		}
-		hmacPosition = hmacalgo + 2;
-		System.out.println("Por default se elegirá RSA como algoritmo de cifrado asimétrico");
+		//Se eliminan todas las llamadas del cliente con la consola, ya que todfos los datos los recibirá por parámetros
 		clientOut.println(HOLA);
 		if(clientIn.readLine().equals(OK))
 		{
-			clientOut.println(ALGORITMOS + AlgorithmSet[simalgo-1] + ":" + AlgorithmSet[2] + ":" + AlgorithmSet[hmacalgo+2]);
+			clientOut.println(ALGORITMOS + AlgorithmSet[simPosition] + ":" + AlgorithmSet[2] + ":" + AlgorithmSet[hmacPosition]);
 			CDF = new CertificateFactory();
 			if(clientIn.readLine().equals(OK))
 			{	
@@ -124,7 +104,7 @@ public class Cliente extends Thread
 		c.init(Cipher.ENCRYPT_MODE, llaveServidor);
 		byte[] cifrado = c.doFinal(llaveSimetrica.getEncoded());
 		clientOut.println(DatatypeConverter.printBase64Binary(cifrado));
-		String reto = "94130EA0EAOSRNIDL57268ctumpbgvy@#$%&QHFZJÑXWK!?-,.";
+		String reto = "94130EAOSRNIDL57268ctumpbgvy@#$%&QHFZJÑXWK!?-,.";
 		clientOut.println(DatatypeConverter.printBase64Binary(reto.getBytes()));
 		String respuesta = clientIn.readLine();
 		c = Cipher.getInstance(AlgorithmSet[simPosition]);

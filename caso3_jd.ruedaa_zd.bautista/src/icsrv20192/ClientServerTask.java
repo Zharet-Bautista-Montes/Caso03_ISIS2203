@@ -1,13 +1,12 @@
 package icsrv20192;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 import uniandes.gload.core.*;
 
 public class ClientServerTask extends Task
 {
-	static int ip; 
+	static int ip;
+	
+	static String hostname; 
 
 	@Override
 	public void fail() 
@@ -24,9 +23,9 @@ public class ClientServerTask extends Task
 	@Override
 	public void execute() 
 	{
+		int simalgo = (int) Math.random()*2;
+		int hmacalgo = (int) Math.random()*4 + 3;
 		Cliente client = new Cliente();
-		try 
-		{ client.run(InetAddress.getLocalHost().getHostName(), ip); } 
-		catch (UnknownHostException e) { e.printStackTrace(); }
+		client.run("localhost", 5386, simalgo, hmacalgo);
 	}
 }
