@@ -23,7 +23,7 @@ import javax.xml.bind.DatatypeConverter;
 
 import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 
-public class Cliente extends Thread
+public class C extends Thread
 {
 	private final static String HOLA = "HOLA";
 	
@@ -120,7 +120,6 @@ public class Cliente extends Thread
 		Cipher c = Cipher.getInstance(AlgorithmSet[simPosition]);
 		c.init(Cipher.DECRYPT_MODE, llaveSimetrica);
 		String valor =  DatatypeConverter.printBase64Binary(c.doFinal(fromStringToByteArray(clientIn.readLine())));
-		int valorHmac = Integer.parseInt(valor);
 		c = Cipher.getInstance(AlgorithmSet[2]);
 		c.init(Cipher.DECRYPT_MODE, llaveServidor);
 		Mac mac = Mac.getInstance(AlgorithmSet[hmacPosition]);

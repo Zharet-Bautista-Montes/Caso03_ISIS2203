@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.management.*;
 import java.net.ServerSocket;
 //TODO cambios: comentado import java.net.Socket;
 import java.security.KeyPair;
@@ -13,27 +12,28 @@ import java.security.Security;
 import java.security.cert.X509Certificate;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import javax.management.*;
 
 public class P {
 	private static ServerSocket ss;	
 	private static final String MAESTRO = "MAESTRO: ";
 	private static X509Certificate certSer; /* acceso default */
-	private static KeyPair keyPairServidor; /* acceso default */ 
+	private static KeyPair keyPairServidor; /* acceso default */
+	private static boolean switcher; 
 	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
-		System.out.println("JVM-Memory" + Runtime.getRuntime().totalMemory());
 		System.out.println(MAESTRO + "Establezca puerto de conexion:");
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
 		int ip = Integer.parseInt(br.readLine());
 		System.out.println(MAESTRO + "Empezando servidor maestro en puerto " + ip);
 		// Adiciona la libreria como un proveedor de seguridad.
-		Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());		
+		Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());	
+		System.out.println(MAESTRO + "¿Iniciar el servidor en modo seguro (true) o inseguro (false)?:");
+		switcher = new Boolean(br.readLine());
 
 		// Crea el archivo de log
 		File file = null;
@@ -48,7 +48,8 @@ public class P {
         FileWriter fw = new FileWriter(file);
         fw.close();
         
-        D.init(certSer, keyPairServidor, file);
+        if(switcher) D.init(certSer, keyPairServidor, file);
+        else UnsafeServer.init(certSer, file);
         
 		// Crea el socket que escucha en el puerto seleccionado y configura los threads del generador.
 		ss = new ServerSocket(ip);
@@ -60,9 +61,14 @@ public class P {
 		for (int i=0;true;i++) {
 			try {
 				//modificado para contar las transacciones exitosas
-				D succeeded = new D(ss.accept(),i);
+				if(switcher)
+				{ D succeeded = new D(ss.accept(),i);
 				if(succeeded != null)
-				{ pool.execute(succeeded); D.contarTrans(); } 
+				{ pool.execute(succeeded); D.contarTrans(); } }
+				else
+				{ UnsafeServer succeeded = new UnsafeServer(ss.accept(),i);
+				if(succeeded != null)
+				{ pool.execute(succeeded); UnsafeServer.contarTrans(); } }
 				//TODO cambios: comentado Socket sc = ss.accept(); 
 				System.out.println(MAESTRO + "Cliente " + i + " aceptado.");
 			} catch (IOException e) {

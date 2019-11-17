@@ -9,11 +9,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.security.PublicKey;
 import java.security.cert.X509Certificate;
 
 import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.KeyGenerator;
 import javax.crypto.Mac;
@@ -53,8 +51,6 @@ private final static String HOLA = "HOLA";
 	
 	private static SecretKey llaveSimetrica;
 	
-	private static PublicKey llaveServidor;
-	
 	public void run(String address, int port, int sim, int hmac) 
 	{
 		try 
@@ -88,41 +84,30 @@ private final static String HOLA = "HOLA";
 	
 	public static void etapa2() throws NoSuchAlgorithmException, InvalidKeyException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, IOException
 	{
-		llaveServidor = certificadoDigital.getPublicKey();
 		KeyGenerator generador = KeyGenerator.getInstance(AlgorithmSet[simPosition]);
 		llaveSimetrica = generador.generateKey();
 		clientOut.println(DatatypeConverter.printBase64Binary(llaveSimetrica.getEncoded()));
 		String reto = "94130EAOSRNIDL57268ctumpbgvy@#$%&QHFZJÑXWK!?-,.";
-		clientOut.println(DatatypeConverter.printBase64Binary(reto.getBytes()));
+		clientOut.println(reto);
 		String respuesta = clientIn.readLine();
 		if (respuesta.equals(reto)) clientOut.println(OK);
-		else clientOut.println(ERROR);
+		else clientOut.println(ERROR); 
 	}
 	
 	public static void etapa3() throws NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException, IOException
 	{
-		Cipher c = Cipher.getInstance(AlgorithmSet[simPosition]);
-		c.init(Cipher.ENCRYPT_MODE, llaveSimetrica);
-		byte[] cifrado = c.doFinal(fromStringToByteArray("1003592593"));
-		clientOut.println(DatatypeConverter.printBase64Binary(cifrado));
-		cifrado = c.doFinal(fromStringToByteArray("unamalaclave123"));
-		clientOut.println(DatatypeConverter.printBase64Binary(cifrado));
+		clientOut.println("1003592593");
+		clientOut.println("unamalaclave123");
 	}
 	
 	public static void etapa4() throws NumberFormatException, IOException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException
 	{
-		Cipher c = Cipher.getInstance(AlgorithmSet[simPosition]);
-		c.init(Cipher.DECRYPT_MODE, llaveSimetrica);
-		String valor =  DatatypeConverter.printBase64Binary(c.doFinal(fromStringToByteArray(clientIn.readLine())));
-		int valorHmac = Integer.parseInt(valor);
-		c = Cipher.getInstance(AlgorithmSet[2]);
-		c.init(Cipher.DECRYPT_MODE, llaveServidor);
+		String valor = clientIn.readLine();
 		Mac mac = Mac.getInstance(AlgorithmSet[hmacPosition]);
 		mac.init(llaveSimetrica);
-		mac.update(valor.getBytes());
-		byte[] digest = mac.doFinal();
-		String hmac = DatatypeConverter.printBase64Binary((c.doFinal(fromStringToByteArray(clientIn.readLine()))));
-		if(digest.equals(hmac.getBytes())) clientOut.println(OK);
+		byte[] digest = mac.doFinal(fromStringToByteArray(valor));
+		String hmac = clientIn.readLine();
+		if(digest.equals(fromStringToByteArray(hmac))) clientOut.println(OK);
 		else clientOut.println(ERROR);
 	}
 	

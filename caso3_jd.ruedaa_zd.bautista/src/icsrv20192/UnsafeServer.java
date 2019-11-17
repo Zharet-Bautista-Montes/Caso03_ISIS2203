@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.lang.management.ManagementFactory;
 import java.net.Socket;
-import java.security.KeyPair;
 import java.security.cert.X509Certificate;
 import java.util.Random;
 
@@ -19,7 +18,7 @@ import javax.management.MBeanServer;
 import javax.management.ObjectName;
 import javax.xml.bind.DatatypeConverter;
 
-public class UnsafeServer 
+public class UnsafeServer extends Thread
 {
 	public static final String OK = "OK";
 	public static final String ALGORITMOS = "ALGORITMOS";
@@ -39,14 +38,12 @@ public class UnsafeServer
 	private byte[] mybyte;
 	private static File file;
 	private static X509Certificate certSer;
-	private static KeyPair keyPairServidor;
 	
 	public static void contarTrans()
 	{ transact++; }
 	
-	public static void init(X509Certificate pCertSer, KeyPair pKeyPairServidor, File pFile) {
+	public static void init(X509Certificate pCertSer, File pFile) {
 		certSer = pCertSer;
-		keyPairServidor = pKeyPairServidor;
 		file = pFile;
 	}
 	
@@ -164,7 +161,7 @@ public class UnsafeServer
 				linea = dc.readLine();
 				System.out.println(dlg + "Recibio reto del cliente:-" + linea + "-");
 				ac.println(linea);
-				System.out.println(dlg + "envio reto cifrado sin llave simetrica al cliente. continuado.");
+				System.out.println(dlg + "envio reto sin cifrado al cliente. continuado.");
 
 				linea = dc.readLine();
 				if ((linea.equals(OK))) {
@@ -176,34 +173,24 @@ public class UnsafeServer
 				}
 				
 				/***** Fase 6:  *****/
+				linea = dc.readLine();
+				System.out.println(dlg + "recibio cc:-" + linea + "-continuado.");				
 				linea = dc.readLine();				
-				byte[] ccByte = S.sd(
-						toByteArray(linea), simetrica, algoritmos[1]);
-				String cc = toHexString(ccByte);
-				System.out.println(dlg + "recibio cc y descifro:-" + cc + "-continuado.");
-				
-				linea = dc.readLine();				
-				byte[] claveByte = S.sd(
-						toByteArray(linea), simetrica, algoritmos[1]);
-				String clave = toHexString(claveByte);
-				System.out.println(dlg + "recibio clave y descifro:-" + clave + "-continuado.");
+				System.out.println(dlg + "recibio clave:-" + linea + "-continuado.");
 				cadenas[5] = dlg + "recibio cc y clave - continuando";
 				
 				Random rand = new Random(); 
 				int valor = rand.nextInt(1000000);
 				String strvalor = valor+"";
+				ac.println(strvalor);
+				cadenas[6] = dlg + "envio valor "+strvalor+" sin cifrado al cliente. continuado.";
+				System.out.println(cadenas[6]);
 				while (strvalor.length()%4!=0) strvalor += 0;
 				byte[] valorByte = toByteArray(strvalor);
-				byte [ ] ciphertext2 = S.se(valorByte, simetrica, algoritmos[1]);
-				ac.println(toHexString(ciphertext2));
-				cadenas[6] = dlg + "envio valor "+strvalor+" cifrado con llave simetrica al cliente. continuado.";
-				System.out.println(cadenas[6]);
-		        
 				byte [] hmac = S.hdg(valorByte, simetrica, algoritmos[3]);
-				byte[] recibo = S.ae(hmac, keyPairServidor.getPrivate(), algoritmos[2]);
-				ac.println(toHexString(recibo));
+				ac.println(toHexString(hmac));
 				tiempoFinal = System.currentTimeMillis();
-				System.out.println(dlg + "envio hmac cifrado con llave privada del servidor. continuado.");
+				System.out.println(dlg + "envio hmac sin cifrado. continuado.");
 				
 				cadenas[7] = "";
 				linea = dc.readLine();	
