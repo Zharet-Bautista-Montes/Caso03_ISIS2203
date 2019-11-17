@@ -20,8 +20,8 @@ public class Generator
 		System.out.println("Ingrese el puerto para conectarse al servidor");
 		portip = generatorconfig.nextInt();
 		Task work = createTask(); 
-		int numberOfTasks = 10; 
-		int gapBetweenTasks = 10;
+		int numberOfTasks = 400; 
+		int gapBetweenTasks = 20;
 		generator = new LoadGenerator("Prueba de Carga Cliente-Servidor", numberOfTasks, work, gapBetweenTasks);
 		generator.generate();
 	}

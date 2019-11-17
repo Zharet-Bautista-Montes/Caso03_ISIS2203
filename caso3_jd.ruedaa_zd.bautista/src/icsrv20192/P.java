@@ -26,7 +26,7 @@ public class P {
 	 */
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
-
+		System.out.println("JVM-Memory" + Runtime.getRuntime().totalMemory());
 		System.out.println(MAESTRO + "Establezca puerto de conexion:");
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);

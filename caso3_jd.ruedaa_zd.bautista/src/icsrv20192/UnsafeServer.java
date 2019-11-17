@@ -19,8 +19,8 @@ import javax.management.MBeanServer;
 import javax.management.ObjectName;
 import javax.xml.bind.DatatypeConverter;
 
-public class D extends Thread {
-
+public class UnsafeServer 
+{
 	public static final String OK = "OK";
 	public static final String ALGORITMOS = "ALGORITMOS";
 	public static final String CERTSRV = "CERTSRV";
@@ -50,7 +50,7 @@ public class D extends Thread {
 		file = pFile;
 	}
 	
-	public D (Socket csP, int idP) {
+	public UnsafeServer (Socket csP, int idP) {
 		sc = csP;
 		dlg = new String("delegado " + idP + ": ");
 		try {
@@ -154,21 +154,17 @@ public class D extends Thread {
 				cadenas[3] = "";
 				tiempoInicial = System.currentTimeMillis();
 				linea = dc.readLine();
-				byte[] llaveSimetrica = S.ad(
-						toByteArray(linea), 
-						keyPairServidor.getPrivate(), algoritmos[2] );
+				byte[] llaveSimetrica = toByteArray(linea);
 				SecretKey simetrica = new SecretKeySpec(llaveSimetrica, 0, llaveSimetrica.length, algoritmos[1]);
-				cadenas[3] = dlg + "recibio y creo llave simetrica. continuando.";
+				cadenas[3] = dlg + "recibio llave simetrica. continuando.";
 				System.out.println(cadenas[3]);
 				
 				/***** Fase 5:  *****/
 				cadenas[4]="";
 				linea = dc.readLine();
 				System.out.println(dlg + "Recibio reto del cliente:-" + linea + "-");
-				byte[] retoByte = toByteArray(linea);
-				byte [ ] ciphertext1 = S.se(retoByte, simetrica, algoritmos[1]);
-				ac.println(toHexString(ciphertext1));
-				System.out.println(dlg + "envio reto cifrado con llave simetrica al cliente. continuado.");
+				ac.println(linea);
+				System.out.println(dlg + "envio reto cifrado sin llave simetrica al cliente. continuado.");
 
 				linea = dc.readLine();
 				if ((linea.equals(OK))) {
@@ -247,5 +243,5 @@ public class D extends Thread {
 		 Double value = (Double)att.getValue();
 		 if (value == -1.0) return Double.NaN; // usually takes a couple of seconds before we get real values
 		 return ((int)(value * 1000) / 10.0); // returns a percentage value with 1 decimal point precision
-	}	
+	}
 }
