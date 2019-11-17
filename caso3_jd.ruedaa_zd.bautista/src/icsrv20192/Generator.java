@@ -9,7 +9,8 @@ public class Generator
 	private LoadGenerator generator;
 	
 	public static int portip;	
-	public static String hostaddress;	
+	public static String hostaddress;
+	public static boolean swap; 
 	public Scanner generatorconfig;
 	
 	public Generator()
@@ -19,16 +20,18 @@ public class Generator
 		hostaddress = generatorconfig.next();
 		System.out.println("Ingrese el puerto para conectarse al servidor");
 		portip = generatorconfig.nextInt();
+		System.out.println("Indique si el servidor está en modo seguro (true) o inseguro (false)");
+		swap = new Boolean(generatorconfig.next());
 		Task work = createTask(); 
-		int numberOfTasks = 100; 
-		int gapBetweenTasks = 1000;
+		int numberOfTasks = 10; 
+		int gapBetweenTasks = 10;
 		generator = new LoadGenerator("Prueba de Carga Cliente-Servidor", numberOfTasks, work, gapBetweenTasks);
 		generator.generate();
 	}
 	
 	public Task createTask()
 	{
-		return new ClientServerTask(portip, hostaddress); 
+		return new ClientServerTask(portip, hostaddress, swap); 
 	}
 	
 	public static void main(String[] args) 

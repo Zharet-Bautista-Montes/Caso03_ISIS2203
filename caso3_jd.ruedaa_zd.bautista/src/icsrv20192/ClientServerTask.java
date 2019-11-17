@@ -6,9 +6,10 @@ public class ClientServerTask extends Task
 {
 	private int ip = 0;	
 	private String ha = ""; 
+	private boolean gater; 
 	
-	public ClientServerTask(int socketip, String socketha)
-	{ ip = socketip; ha = socketha; }
+	public ClientServerTask(int socketip, String socketha, boolean gate)
+	{ ip = socketip; ha = socketha; gater = gate; }
 
 	@Override
 	public void fail() 
@@ -27,7 +28,11 @@ public class ClientServerTask extends Task
 	{
 		int simalgo = (int) (Math.random()*2);
 		int hmacalgo = (int) (Math.random()*4 + 3);
-		Cliente client = new Cliente();
-		synchronized (Cliente.class) {client.run(ha, ip, simalgo, hmacalgo);};
+		if(gater)
+		{ C client = new C();
+		synchronized (C.class) {client.run(ha, ip, simalgo, hmacalgo);}; }
+		else
+		{ UnsafeClient client = new UnsafeClient();
+		synchronized (UnsafeClient.class) {client.run(ha, ip, simalgo, hmacalgo);}; }
 	}
 }
