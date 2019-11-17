@@ -58,9 +58,12 @@ public class P {
 		int poolSize = Integer.parseInt(br.readLine());
 		ExecutorService pool = Executors.newFixedThreadPool(poolSize);
 		for (int i=0;true;i++) {
-			try { 
-				pool.execute(new D(ss.accept(),i));
-				//TODO cambios: comentado Socket sc = ss.accept();
+			try {
+				//modificado para contar las transacciones exitosas
+				D succeeded = new D(ss.accept(),i);
+				if(succeeded != null)
+				{ pool.execute(succeeded); D.contarTrans(); } 
+				//TODO cambios: comentado Socket sc = ss.accept(); 
 				System.out.println(MAESTRO + "Cliente " + i + " aceptado.");
 			} catch (IOException e) {
 				System.out.println(MAESTRO + "Error creando el socket cliente.");

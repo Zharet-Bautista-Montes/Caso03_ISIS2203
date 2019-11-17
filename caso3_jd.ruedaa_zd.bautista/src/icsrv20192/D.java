@@ -31,6 +31,8 @@ public class D extends Thread {
 	public static final String ERROR = "ERROR";
 	public static final String REC = "recibio-";
 	public static final int numCadenas = 8;
+	public static int Tasknumber = 0;
+	public static int transact = 0;
 
 	// Atributos
 	private Socket sc = null;
@@ -39,6 +41,9 @@ public class D extends Thread {
 	private static File file;
 	private static X509Certificate certSer;
 	private static KeyPair keyPairServidor;
+	
+	public static void contarTrans()
+	{ transact++; }
 	
 	public static void init(X509Certificate pCertSer, KeyPair pKeyPairServidor, File pFile) {
 		certSer = pCertSer;
@@ -219,7 +224,7 @@ public class D extends Thread {
 			    for (int i=0;i<numCadenas;i++) {
 				    escribirMensaje(cadenas[i]);
 			    }			    
-			    escribirMensaje("Tiempo de respuesta: " + (tiempoFinal - tiempoInicial) + "\n" + "Uso de CPU: " + getSystemCpuLoad());
+			    escribirMensaje("Tiempo de respuesta: " + (tiempoFinal - tiempoInicial) + "\n" + "Uso de CPU: " + getSystemCpuLoad() + "\n" + "Transacciones exitosas: " + transact);
 	        } catch (Exception e) {
 	          e.printStackTrace();
 	        }

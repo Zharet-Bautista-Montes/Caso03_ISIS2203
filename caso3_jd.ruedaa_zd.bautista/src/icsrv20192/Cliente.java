@@ -70,10 +70,7 @@ public class Cliente extends Thread
 			etapa4();
 		} 
 		catch (Exception e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		{ e.printStackTrace(); }
 	}
 	
 	public static void etapa1() throws Exception
@@ -84,14 +81,8 @@ public class Cliente extends Thread
 		{
 			clientOut.println(ALGORITMOS + AlgorithmSet[simPosition] + ":" + AlgorithmSet[2] + ":" + AlgorithmSet[hmacPosition]);
 			CDF = new CertificateFactory();
-			if(clientIn.readLine().equals(OK))
-			{	
-				certificadoDigital = (X509Certificate) CDF.engineGenerateCertificate(new ByteArrayInputStream(fromStringToByteArray(clientIn.readLine())));		
-			}
-			else
-			{
-				throw new IOException("El servidor rechazó la propuesta de algoritmos"); 
-			}
+			if(clientIn.readLine().equals(OK)) certificadoDigital = (X509Certificate) CDF.engineGenerateCertificate(new ByteArrayInputStream(fromStringToByteArray(clientIn.readLine())));
+			else throw new IOException("El servidor rechazó la propuesta de algoritmos"); 
 		}
 	}
 	
@@ -110,14 +101,8 @@ public class Cliente extends Thread
 		c = Cipher.getInstance(AlgorithmSet[simPosition]);
 		c.init(Cipher.DECRYPT_MODE, llaveSimetrica);
 		respuesta =  new String(c.doFinal(fromStringToByteArray(respuesta)));
-		if (respuesta.equals(reto))
-		{
-			clientOut.println(OK);
-		}
-		else
-		{
-			clientOut.println(ERROR);
-		}
+		if (respuesta.equals(reto)) clientOut.println(OK);
+		else clientOut.println(ERROR);
 	}
 	
 	public static void etapa3() throws NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException, IOException
@@ -143,22 +128,15 @@ public class Cliente extends Thread
 		mac.update(valor.getBytes());
 		byte[] digest = mac.doFinal();
 		String hmac = DatatypeConverter.printBase64Binary((c.doFinal(fromStringToByteArray(clientIn.readLine()))));
-		if(digest.equals(hmac.getBytes()))
-		{
-			clientOut.println(OK);
-		}
-		else
-		{
-			clientOut.println(ERROR);
-		}
+		if(digest.equals(hmac.getBytes())) clientOut.println(OK);
+		else clientOut.println(ERROR);
 	}
+	
 	private static byte[] fromStringToByteArray(String cadena)
 	{
 		int a, l = 4 - cadena.length() % 4;
 		for(a=0; l != 4 && a < l; a++)
-		{
 			cadena = "0" + cadena;
-		}
 		return DatatypeConverter.parseBase64Binary(cadena); 
 	}
 }
