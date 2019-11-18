@@ -23,8 +23,8 @@ public class Generator
 		System.out.println("Indique si el servidor está en modo seguro (true) o inseguro (false)");
 		swap = new Boolean(generatorconfig.next());
 		Task work = createTask(); 
-		int numberOfTasks = 10; 
-		int gapBetweenTasks = 10;
+		int numberOfTasks = 80; 
+		int gapBetweenTasks = 100;
 		generator = new LoadGenerator("Prueba de Carga Cliente-Servidor", numberOfTasks, work, gapBetweenTasks);
 		generator.generate();
 	}

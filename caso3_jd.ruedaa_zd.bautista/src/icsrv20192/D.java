@@ -40,6 +40,8 @@ public class D extends Thread {
 	private static File file;
 	private static X509Certificate certSer;
 	private static KeyPair keyPairServidor;
+	private static long responseTime = 0; 
+	private static double CPUusage = 0.0; 
 	
 	public static void contarTrans()
 	{ transact++; }
@@ -222,8 +224,10 @@ public class D extends Thread {
 
 			    for (int i=0;i<numCadenas;i++) {
 				    escribirMensaje(cadenas[i]);
-			    }			    
-			    escribirMensaje("Tiempo de respuesta: " + (tiempoFinal - tiempoInicial) + "\n" + "Uso de CPU: " + getSystemCpuLoad() + "\n" + "Transacciones exitosas: " + transact);
+			    }
+			    responseTime += (tiempoFinal - tiempoInicial);
+			    CPUusage += getSystemCpuLoad();
+			    escribirMensaje("Tiempo de respuesta acumulado: " + responseTime + "\n" + "Uso de CPU acumulado: " + CPUusage  + "\n" + "Transacciones exitosas: " + transact);
 	        } catch (Exception e) {
 	          e.printStackTrace();
 	        }

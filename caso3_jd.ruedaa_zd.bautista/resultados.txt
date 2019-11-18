@@ -1,110 +1,880 @@
 delegado 0: recibio-HOLA-continuando.
-delegado 0: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 0: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
 delegado 0: envio certificado del servidor. continuando.
-delegado 0: recibio llave simetrica. continuando.
+delegado 0: recibio y creo llave simetrica. continuando.
 delegado 0: recibio confirmacion del cliente:OK-continuado.
 delegado 0: recibio cc y clave - continuando
-delegado 0: envio valor 859118 sin cifrado al cliente. continuado.
+delegado 0: envio valor 27886700 cifrado con llave simetrica al cliente. continuado.
 delegado 0: Terminando con errorERROR
-Tiempo de respuesta: 937
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 999
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 2
 delegado 1: recibio-HOLA-continuando.
-delegado 1: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 1: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
 delegado 1: envio certificado del servidor. continuando.
-delegado 1: recibio llave simetrica. continuando.
+delegado 1: recibio y creo llave simetrica. continuando.
 delegado 1: recibio confirmacion del cliente:OK-continuado.
 delegado 1: recibio cc y clave - continuando
-delegado 1: envio valor 633021 sin cifrado al cliente. continuado.
+delegado 1: envio valor 27719100 cifrado con llave simetrica al cliente. continuado.
 delegado 1: Terminando con errorERROR
-Tiempo de respuesta: 5
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1014
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 3
 delegado 2: recibio-HOLA-continuando.
-delegado 2: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 2: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
 delegado 2: envio certificado del servidor. continuando.
-delegado 2: recibio llave simetrica. continuando.
+delegado 2: recibio y creo llave simetrica. continuando.
 delegado 2: recibio confirmacion del cliente:OK-continuado.
 delegado 2: recibio cc y clave - continuando
-delegado 2: envio valor 875671 sin cifrado al cliente. continuado.
+delegado 2: envio valor 11119600 cifrado con llave simetrica al cliente. continuado.
 delegado 2: Terminando con errorERROR
-Tiempo de respuesta: 1
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1035
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 4
 delegado 3: recibio-HOLA-continuando.
-delegado 3: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 3: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
 delegado 3: envio certificado del servidor. continuando.
-delegado 3: recibio llave simetrica. continuando.
+delegado 3: recibio y creo llave simetrica. continuando.
 delegado 3: recibio confirmacion del cliente:OK-continuado.
 delegado 3: recibio cc y clave - continuando
-delegado 3: envio valor 168531 sin cifrado al cliente. continuado.
+delegado 3: envio valor 59047300 cifrado con llave simetrica al cliente. continuado.
 delegado 3: Terminando con errorERROR
-Tiempo de respuesta: 2
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1048
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 5
 delegado 4: recibio-HOLA-continuando.
-delegado 4: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 4: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
 delegado 4: envio certificado del servidor. continuando.
-delegado 4: recibio llave simetrica. continuando.
+delegado 4: recibio y creo llave simetrica. continuando.
 delegado 4: recibio confirmacion del cliente:OK-continuado.
 delegado 4: recibio cc y clave - continuando
-delegado 4: envio valor 823502 sin cifrado al cliente. continuado.
+delegado 4: envio valor 94935500 cifrado con llave simetrica al cliente. continuado.
 delegado 4: Terminando con errorERROR
-Tiempo de respuesta: 2
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1061
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 6
 delegado 5: recibio-HOLA-continuando.
-delegado 5: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 5: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
 delegado 5: envio certificado del servidor. continuando.
-delegado 5: recibio llave simetrica. continuando.
+delegado 5: recibio y creo llave simetrica. continuando.
 delegado 5: recibio confirmacion del cliente:OK-continuado.
 delegado 5: recibio cc y clave - continuando
-delegado 5: envio valor 958630 sin cifrado al cliente. continuado.
+delegado 5: envio valor 10723700 cifrado con llave simetrica al cliente. continuado.
 delegado 5: Terminando con errorERROR
-Tiempo de respuesta: 2
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1074
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 7
 delegado 6: recibio-HOLA-continuando.
-delegado 6: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 6: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
 delegado 6: envio certificado del servidor. continuando.
-delegado 6: recibio llave simetrica. continuando.
+delegado 6: recibio y creo llave simetrica. continuando.
 delegado 6: recibio confirmacion del cliente:OK-continuado.
 delegado 6: recibio cc y clave - continuando
-delegado 6: envio valor 474978 sin cifrado al cliente. continuado.
+delegado 6: envio valor 67983100 cifrado con llave simetrica al cliente. continuado.
 delegado 6: Terminando con errorERROR
-Tiempo de respuesta: 2
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1088
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 8
 delegado 7: recibio-HOLA-continuando.
-delegado 7: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 7: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
 delegado 7: envio certificado del servidor. continuando.
-delegado 7: recibio llave simetrica. continuando.
+delegado 7: recibio y creo llave simetrica. continuando.
 delegado 7: recibio confirmacion del cliente:OK-continuado.
 delegado 7: recibio cc y clave - continuando
-delegado 7: envio valor 216138 sin cifrado al cliente. continuado.
+delegado 7: envio valor 14167500 cifrado con llave simetrica al cliente. continuado.
 delegado 7: Terminando con errorERROR
-Tiempo de respuesta: 1
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1101
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 9
 delegado 8: recibio-HOLA-continuando.
-delegado 8: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 8: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
 delegado 8: envio certificado del servidor. continuando.
-delegado 8: recibio llave simetrica. continuando.
+delegado 8: recibio y creo llave simetrica. continuando.
 delegado 8: recibio confirmacion del cliente:OK-continuado.
 delegado 8: recibio cc y clave - continuando
-delegado 8: envio valor 540187 sin cifrado al cliente. continuado.
+delegado 8: envio valor 16465700 cifrado con llave simetrica al cliente. continuado.
 delegado 8: Terminando con errorERROR
-Tiempo de respuesta: 1
-Uso de CPU: 0.0
+Tiempo de respuesta acumulado: 1115
+Uso de CPU acumulado: 0.0
 Transacciones exitosas: 10
 delegado 9: recibio-HOLA-continuando.
-delegado 9: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 9: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
 delegado 9: envio certificado del servidor. continuando.
-delegado 9: recibio llave simetrica. continuando.
+delegado 9: recibio y creo llave simetrica. continuando.
 delegado 9: recibio confirmacion del cliente:OK-continuado.
 delegado 9: recibio cc y clave - continuando
-delegado 9: envio valor 555474 sin cifrado al cliente. continuado.
+delegado 9: envio valor 24679300 cifrado con llave simetrica al cliente. continuado.
 delegado 9: Terminando con errorERROR
-Tiempo de respuesta: 1
-Uso de CPU: 0.0
-Transacciones exitosas: 10
+Tiempo de respuesta acumulado: 1127
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 11
+delegado 10: recibio-HOLA-continuando.
+delegado 10: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 10: envio certificado del servidor. continuando.
+delegado 10: recibio y creo llave simetrica. continuando.
+delegado 10: recibio confirmacion del cliente:OK-continuado.
+delegado 10: recibio cc y clave - continuando
+delegado 10: envio valor 55034800 cifrado con llave simetrica al cliente. continuado.
+delegado 10: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1140
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 12
+delegado 11: recibio-HOLA-continuando.
+delegado 11: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 11: envio certificado del servidor. continuando.
+delegado 11: recibio y creo llave simetrica. continuando.
+delegado 11: recibio confirmacion del cliente:OK-continuado.
+delegado 11: recibio cc y clave - continuando
+delegado 11: envio valor 86843800 cifrado con llave simetrica al cliente. continuado.
+delegado 11: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1153
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 13
+delegado 12: recibio-HOLA-continuando.
+delegado 12: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 12: envio certificado del servidor. continuando.
+delegado 12: recibio y creo llave simetrica. continuando.
+delegado 12: recibio confirmacion del cliente:OK-continuado.
+delegado 12: recibio cc y clave - continuando
+delegado 12: envio valor 26454000 cifrado con llave simetrica al cliente. continuado.
+delegado 12: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1167
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 14
+delegado 13: recibio-HOLA-continuando.
+delegado 13: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 13: envio certificado del servidor. continuando.
+delegado 13: recibio y creo llave simetrica. continuando.
+delegado 13: recibio confirmacion del cliente:OK-continuado.
+delegado 13: recibio cc y clave - continuando
+delegado 13: envio valor 50464700 cifrado con llave simetrica al cliente. continuado.
+delegado 13: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1181
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 15
+delegado 14: recibio-HOLA-continuando.
+delegado 14: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 14: envio certificado del servidor. continuando.
+delegado 14: recibio y creo llave simetrica. continuando.
+delegado 14: recibio confirmacion del cliente:OK-continuado.
+delegado 14: recibio cc y clave - continuando
+delegado 14: envio valor 11834500 cifrado con llave simetrica al cliente. continuado.
+delegado 14: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1193
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 16
+delegado 15: recibio-HOLA-continuando.
+delegado 15: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 15: envio certificado del servidor. continuando.
+delegado 15: recibio y creo llave simetrica. continuando.
+delegado 15: recibio confirmacion del cliente:OK-continuado.
+delegado 15: recibio cc y clave - continuando
+delegado 15: envio valor 26320600 cifrado con llave simetrica al cliente. continuado.
+delegado 15: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1206
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 17
+delegado 16: recibio-HOLA-continuando.
+delegado 16: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 16: envio certificado del servidor. continuando.
+delegado 16: recibio y creo llave simetrica. continuando.
+delegado 16: recibio confirmacion del cliente:OK-continuado.
+delegado 16: recibio cc y clave - continuando
+delegado 16: envio valor 52507300 cifrado con llave simetrica al cliente. continuado.
+delegado 16: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1219
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 18
+delegado 17: recibio-HOLA-continuando.
+delegado 17: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 17: envio certificado del servidor. continuando.
+delegado 17: recibio y creo llave simetrica. continuando.
+delegado 17: recibio confirmacion del cliente:OK-continuado.
+delegado 17: recibio cc y clave - continuando
+delegado 17: envio valor 69410000 cifrado con llave simetrica al cliente. continuado.
+delegado 17: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1232
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 19
+delegado 18: recibio-HOLA-continuando.
+delegado 18: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 18: envio certificado del servidor. continuando.
+delegado 18: recibio y creo llave simetrica. continuando.
+delegado 18: recibio confirmacion del cliente:OK-continuado.
+delegado 18: recibio cc y clave - continuando
+delegado 18: envio valor 64891400 cifrado con llave simetrica al cliente. continuado.
+delegado 18: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1245
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 20
+delegado 19: recibio-HOLA-continuando.
+delegado 19: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 19: envio certificado del servidor. continuando.
+delegado 19: recibio y creo llave simetrica. continuando.
+delegado 19: recibio confirmacion del cliente:OK-continuado.
+delegado 19: recibio cc y clave - continuando
+delegado 19: envio valor 13941700 cifrado con llave simetrica al cliente. continuado.
+delegado 19: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1258
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 21
+delegado 20: recibio-HOLA-continuando.
+delegado 20: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 20: envio certificado del servidor. continuando.
+delegado 20: recibio y creo llave simetrica. continuando.
+delegado 20: recibio confirmacion del cliente:OK-continuado.
+delegado 20: recibio cc y clave - continuando
+delegado 20: envio valor 44588200 cifrado con llave simetrica al cliente. continuado.
+delegado 20: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1271
+Uso de CPU acumulado: 0.0
+Transacciones exitosas: 22
+delegado 21: recibio-HOLA-continuando.
+delegado 21: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 21: envio certificado del servidor. continuando.
+delegado 21: recibio y creo llave simetrica. continuando.
+delegado 21: recibio confirmacion del cliente:OK-continuado.
+delegado 21: recibio cc y clave - continuando
+delegado 21: envio valor 31490600 cifrado con llave simetrica al cliente. continuado.
+delegado 21: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1284
+Uso de CPU acumulado: 25.2
+Transacciones exitosas: 23
+delegado 22: recibio-HOLA-continuando.
+delegado 22: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 22: envio certificado del servidor. continuando.
+delegado 22: recibio y creo llave simetrica. continuando.
+delegado 22: recibio confirmacion del cliente:OK-continuado.
+delegado 22: recibio cc y clave - continuando
+delegado 22: envio valor 23031500 cifrado con llave simetrica al cliente. continuado.
+delegado 22: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1296
+Uso de CPU acumulado: 50.4
+Transacciones exitosas: 24
+delegado 23: recibio-HOLA-continuando.
+delegado 23: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 23: envio certificado del servidor. continuando.
+delegado 23: recibio y creo llave simetrica. continuando.
+delegado 23: recibio confirmacion del cliente:OK-continuado.
+delegado 23: recibio cc y clave - continuando
+delegado 23: envio valor 23267100 cifrado con llave simetrica al cliente. continuado.
+delegado 23: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1313
+Uso de CPU acumulado: 75.6
+Transacciones exitosas: 25
+delegado 24: recibio-HOLA-continuando.
+delegado 24: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 24: envio certificado del servidor. continuando.
+delegado 24: recibio y creo llave simetrica. continuando.
+delegado 24: recibio confirmacion del cliente:OK-continuado.
+delegado 24: recibio cc y clave - continuando
+delegado 24: envio valor 24467000 cifrado con llave simetrica al cliente. continuado.
+delegado 24: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1326
+Uso de CPU acumulado: 100.8
+Transacciones exitosas: 25
+delegado 25: recibio-HOLA-continuando.
+delegado 25: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 25: envio certificado del servidor. continuando.
+delegado 25: recibio y creo llave simetrica. continuando.
+delegado 25: recibio confirmacion del cliente:OK-continuado.
+delegado 25: recibio cc y clave - continuando
+delegado 25: envio valor 61504300 cifrado con llave simetrica al cliente. continuado.
+delegado 25: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1338
+Uso de CPU acumulado: 126.0
+Transacciones exitosas: 26
+delegado 26: recibio-HOLA-continuando.
+delegado 26: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 26: envio certificado del servidor. continuando.
+delegado 26: recibio y creo llave simetrica. continuando.
+delegado 26: recibio confirmacion del cliente:OK-continuado.
+delegado 26: recibio cc y clave - continuando
+delegado 26: envio valor 86770200 cifrado con llave simetrica al cliente. continuado.
+delegado 26: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1350
+Uso de CPU acumulado: 151.2
+Transacciones exitosas: 27
+delegado 27: recibio-HOLA-continuando.
+delegado 27: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 27: envio certificado del servidor. continuando.
+delegado 27: recibio y creo llave simetrica. continuando.
+delegado 27: recibio confirmacion del cliente:OK-continuado.
+delegado 27: recibio cc y clave - continuando
+delegado 27: envio valor 16581800 cifrado con llave simetrica al cliente. continuado.
+delegado 27: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1364
+Uso de CPU acumulado: 176.39999999999998
+Transacciones exitosas: 28
+delegado 28: recibio-HOLA-continuando.
+delegado 28: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 28: envio certificado del servidor. continuando.
+delegado 28: recibio y creo llave simetrica. continuando.
+delegado 28: recibio confirmacion del cliente:OK-continuado.
+delegado 28: recibio cc y clave - continuando
+delegado 28: envio valor 60192800 cifrado con llave simetrica al cliente. continuado.
+delegado 28: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1376
+Uso de CPU acumulado: 201.59999999999997
+Transacciones exitosas: 29
+delegado 29: recibio-HOLA-continuando.
+delegado 29: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 29: envio certificado del servidor. continuando.
+delegado 29: recibio y creo llave simetrica. continuando.
+delegado 29: recibio confirmacion del cliente:OK-continuado.
+delegado 29: recibio cc y clave - continuando
+delegado 29: envio valor 72659200 cifrado con llave simetrica al cliente. continuado.
+delegado 29: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1389
+Uso de CPU acumulado: 211.49999999999997
+Transacciones exitosas: 30
+delegado 30: recibio-HOLA-continuando.
+delegado 30: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 30: envio certificado del servidor. continuando.
+delegado 30: recibio y creo llave simetrica. continuando.
+delegado 30: recibio confirmacion del cliente:OK-continuado.
+delegado 30: recibio cc y clave - continuando
+delegado 30: envio valor 65324300 cifrado con llave simetrica al cliente. continuado.
+delegado 30: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1401
+Uso de CPU acumulado: 221.39999999999998
+Transacciones exitosas: 31
+delegado 31: recibio-HOLA-continuando.
+delegado 31: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 31: envio certificado del servidor. continuando.
+delegado 31: recibio y creo llave simetrica. continuando.
+delegado 31: recibio confirmacion del cliente:OK-continuado.
+delegado 31: recibio cc y clave - continuando
+delegado 31: envio valor 61318500 cifrado con llave simetrica al cliente. continuado.
+delegado 31: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1413
+Uso de CPU acumulado: 231.29999999999998
+Transacciones exitosas: 32
+delegado 32: recibio-HOLA-continuando.
+delegado 32: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 32: envio certificado del servidor. continuando.
+delegado 32: recibio y creo llave simetrica. continuando.
+delegado 32: recibio confirmacion del cliente:OK-continuado.
+delegado 32: recibio cc y clave - continuando
+delegado 32: envio valor 27059400 cifrado con llave simetrica al cliente. continuado.
+delegado 32: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1425
+Uso de CPU acumulado: 241.2
+Transacciones exitosas: 33
+delegado 33: recibio-HOLA-continuando.
+delegado 33: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 33: envio certificado del servidor. continuando.
+delegado 33: recibio y creo llave simetrica. continuando.
+delegado 33: recibio confirmacion del cliente:OK-continuado.
+delegado 33: recibio cc y clave - continuando
+delegado 33: envio valor 27397200 cifrado con llave simetrica al cliente. continuado.
+delegado 33: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1437
+Uso de CPU acumulado: 251.1
+Transacciones exitosas: 34
+delegado 34: recibio-HOLA-continuando.
+delegado 34: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 34: envio certificado del servidor. continuando.
+delegado 34: recibio y creo llave simetrica. continuando.
+delegado 34: recibio confirmacion del cliente:OK-continuado.
+delegado 34: recibio cc y clave - continuando
+delegado 34: envio valor 54217200 cifrado con llave simetrica al cliente. continuado.
+delegado 34: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1450
+Uso de CPU acumulado: 259.2
+Transacciones exitosas: 35
+delegado 35: recibio-HOLA-continuando.
+delegado 35: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 35: envio certificado del servidor. continuando.
+delegado 35: recibio y creo llave simetrica. continuando.
+delegado 35: recibio confirmacion del cliente:OK-continuado.
+delegado 35: recibio cc y clave - continuando
+delegado 35: envio valor 94596000 cifrado con llave simetrica al cliente. continuado.
+delegado 35: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1462
+Uso de CPU acumulado: 267.3
+Transacciones exitosas: 36
+delegado 36: recibio-HOLA-continuando.
+delegado 36: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 36: envio certificado del servidor. continuando.
+delegado 36: recibio y creo llave simetrica. continuando.
+delegado 36: recibio confirmacion del cliente:OK-continuado.
+delegado 36: recibio cc y clave - continuando
+delegado 36: envio valor 71565400 cifrado con llave simetrica al cliente. continuado.
+delegado 36: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1479
+Uso de CPU acumulado: 275.40000000000003
+Transacciones exitosas: 37
+delegado 37: recibio-HOLA-continuando.
+delegado 37: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 37: envio certificado del servidor. continuando.
+delegado 37: recibio y creo llave simetrica. continuando.
+delegado 37: recibio confirmacion del cliente:OK-continuado.
+delegado 37: recibio cc y clave - continuando
+delegado 37: envio valor 83993600 cifrado con llave simetrica al cliente. continuado.
+delegado 37: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1492
+Uso de CPU acumulado: 283.50000000000006
+Transacciones exitosas: 38
+delegado 38: recibio-HOLA-continuando.
+delegado 38: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 38: envio certificado del servidor. continuando.
+delegado 38: recibio y creo llave simetrica. continuando.
+delegado 38: recibio confirmacion del cliente:OK-continuado.
+delegado 38: recibio cc y clave - continuando
+delegado 38: envio valor 85386000 cifrado con llave simetrica al cliente. continuado.
+delegado 38: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1505
+Uso de CPU acumulado: 291.6000000000001
+Transacciones exitosas: 39
+delegado 39: recibio-HOLA-continuando.
+delegado 39: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 39: envio certificado del servidor. continuando.
+delegado 39: recibio y creo llave simetrica. continuando.
+delegado 39: recibio confirmacion del cliente:OK-continuado.
+delegado 39: recibio cc y clave - continuando
+delegado 39: envio valor 39694600 cifrado con llave simetrica al cliente. continuado.
+delegado 39: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1517
+Uso de CPU acumulado: 299.7000000000001
+Transacciones exitosas: 40
+delegado 40: recibio-HOLA-continuando.
+delegado 40: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 40: envio certificado del servidor. continuando.
+delegado 40: recibio y creo llave simetrica. continuando.
+delegado 40: recibio confirmacion del cliente:OK-continuado.
+delegado 40: recibio cc y clave - continuando
+delegado 40: envio valor 38175500 cifrado con llave simetrica al cliente. continuado.
+delegado 40: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1529
+Uso de CPU acumulado: 308.4000000000001
+Transacciones exitosas: 41
+delegado 41: recibio-HOLA-continuando.
+delegado 41: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 41: envio certificado del servidor. continuando.
+delegado 41: recibio y creo llave simetrica. continuando.
+delegado 41: recibio confirmacion del cliente:OK-continuado.
+delegado 41: recibio cc y clave - continuando
+delegado 41: envio valor 90817900 cifrado con llave simetrica al cliente. continuado.
+delegado 41: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1541
+Uso de CPU acumulado: 317.1000000000001
+Transacciones exitosas: 42
+delegado 42: recibio-HOLA-continuando.
+delegado 42: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 42: envio certificado del servidor. continuando.
+delegado 42: recibio y creo llave simetrica. continuando.
+delegado 42: recibio confirmacion del cliente:OK-continuado.
+delegado 42: recibio cc y clave - continuando
+delegado 42: envio valor 54157300 cifrado con llave simetrica al cliente. continuado.
+delegado 42: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1554
+Uso de CPU acumulado: 325.80000000000007
+Transacciones exitosas: 43
+delegado 43: recibio-HOLA-continuando.
+delegado 43: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 43: envio certificado del servidor. continuando.
+delegado 43: recibio y creo llave simetrica. continuando.
+delegado 43: recibio confirmacion del cliente:OK-continuado.
+delegado 43: recibio cc y clave - continuando
+delegado 43: envio valor 57926500 cifrado con llave simetrica al cliente. continuado.
+delegado 43: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1567
+Uso de CPU acumulado: 334.50000000000006
+Transacciones exitosas: 44
+delegado 44: recibio-HOLA-continuando.
+delegado 44: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 44: envio certificado del servidor. continuando.
+delegado 44: recibio y creo llave simetrica. continuando.
+delegado 44: recibio confirmacion del cliente:OK-continuado.
+delegado 44: recibio cc y clave - continuando
+delegado 44: envio valor 17440000 cifrado con llave simetrica al cliente. continuado.
+delegado 44: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1579
+Uso de CPU acumulado: 343.20000000000005
+Transacciones exitosas: 45
+delegado 45: recibio-HOLA-continuando.
+delegado 45: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 45: envio certificado del servidor. continuando.
+delegado 45: recibio y creo llave simetrica. continuando.
+delegado 45: recibio confirmacion del cliente:OK-continuado.
+delegado 45: recibio cc y clave - continuando
+delegado 45: envio valor 72946100 cifrado con llave simetrica al cliente. continuado.
+delegado 45: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1591
+Uso de CPU acumulado: 354.00000000000006
+Transacciones exitosas: 46
+delegado 46: recibio-HOLA-continuando.
+delegado 46: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 46: envio certificado del servidor. continuando.
+delegado 46: recibio y creo llave simetrica. continuando.
+delegado 46: recibio confirmacion del cliente:OK-continuado.
+delegado 46: recibio cc y clave - continuando
+delegado 46: envio valor 29122000 cifrado con llave simetrica al cliente. continuado.
+delegado 46: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1603
+Uso de CPU acumulado: 364.80000000000007
+Transacciones exitosas: 47
+delegado 47: recibio-HOLA-continuando.
+delegado 47: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 47: envio certificado del servidor. continuando.
+delegado 47: recibio y creo llave simetrica. continuando.
+delegado 47: recibio confirmacion del cliente:OK-continuado.
+delegado 47: recibio cc y clave - continuando
+delegado 47: envio valor 70592900 cifrado con llave simetrica al cliente. continuado.
+delegado 47: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1615
+Uso de CPU acumulado: 375.6000000000001
+Transacciones exitosas: 48
+delegado 48: recibio-HOLA-continuando.
+delegado 48: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 48: envio certificado del servidor. continuando.
+delegado 48: recibio y creo llave simetrica. continuando.
+delegado 48: recibio confirmacion del cliente:OK-continuado.
+delegado 48: recibio cc y clave - continuando
+delegado 48: envio valor 69896600 cifrado con llave simetrica al cliente. continuado.
+delegado 48: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1627
+Uso de CPU acumulado: 386.4000000000001
+Transacciones exitosas: 49
+delegado 49: recibio-HOLA-continuando.
+delegado 49: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 49: envio certificado del servidor. continuando.
+delegado 49: recibio y creo llave simetrica. continuando.
+delegado 49: recibio confirmacion del cliente:OK-continuado.
+delegado 49: recibio cc y clave - continuando
+delegado 49: envio valor 81010200 cifrado con llave simetrica al cliente. continuado.
+delegado 49: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1639
+Uso de CPU acumulado: 397.2000000000001
+Transacciones exitosas: 50
+delegado 50: recibio-HOLA-continuando.
+delegado 50: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 50: envio certificado del servidor. continuando.
+delegado 50: recibio y creo llave simetrica. continuando.
+delegado 50: recibio confirmacion del cliente:OK-continuado.
+delegado 50: recibio cc y clave - continuando
+delegado 50: envio valor 99282700 cifrado con llave simetrica al cliente. continuado.
+delegado 50: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1651
+Uso de CPU acumulado: 408.0000000000001
+Transacciones exitosas: 51
+delegado 51: recibio-HOLA-continuando.
+delegado 51: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 51: envio certificado del servidor. continuando.
+delegado 51: recibio y creo llave simetrica. continuando.
+delegado 51: recibio confirmacion del cliente:OK-continuado.
+delegado 51: recibio cc y clave - continuando
+delegado 51: envio valor 32304800 cifrado con llave simetrica al cliente. continuado.
+delegado 51: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1663
+Uso de CPU acumulado: 417.3000000000001
+Transacciones exitosas: 52
+delegado 52: recibio-HOLA-continuando.
+delegado 52: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 52: envio certificado del servidor. continuando.
+delegado 52: recibio y creo llave simetrica. continuando.
+delegado 52: recibio confirmacion del cliente:OK-continuado.
+delegado 52: recibio cc y clave - continuando
+delegado 52: envio valor 16059900 cifrado con llave simetrica al cliente. continuado.
+delegado 52: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1676
+Uso de CPU acumulado: 426.60000000000014
+Transacciones exitosas: 53
+delegado 53: recibio-HOLA-continuando.
+delegado 53: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 53: envio certificado del servidor. continuando.
+delegado 53: recibio y creo llave simetrica. continuando.
+delegado 53: recibio confirmacion del cliente:OK-continuado.
+delegado 53: recibio cc y clave - continuando
+delegado 53: envio valor 42089100 cifrado con llave simetrica al cliente. continuado.
+delegado 53: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1688
+Uso de CPU acumulado: 435.90000000000015
+Transacciones exitosas: 54
+delegado 54: recibio-HOLA-continuando.
+delegado 54: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 54: envio certificado del servidor. continuando.
+delegado 54: recibio y creo llave simetrica. continuando.
+delegado 54: recibio confirmacion del cliente:OK-continuado.
+delegado 54: recibio cc y clave - continuando
+delegado 54: envio valor 25326500 cifrado con llave simetrica al cliente. continuado.
+delegado 54: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1700
+Uso de CPU acumulado: 445.20000000000016
+Transacciones exitosas: 55
+delegado 55: recibio-HOLA-continuando.
+delegado 55: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 55: envio certificado del servidor. continuando.
+delegado 55: recibio y creo llave simetrica. continuando.
+delegado 55: recibio confirmacion del cliente:OK-continuado.
+delegado 55: recibio cc y clave - continuando
+delegado 55: envio valor 64418000 cifrado con llave simetrica al cliente. continuado.
+delegado 55: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1713
+Uso de CPU acumulado: 454.50000000000017
+Transacciones exitosas: 56
+delegado 56: recibio-HOLA-continuando.
+delegado 56: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 56: envio certificado del servidor. continuando.
+delegado 56: recibio y creo llave simetrica. continuando.
+delegado 56: recibio confirmacion del cliente:OK-continuado.
+delegado 56: recibio cc y clave - continuando
+delegado 56: envio valor 26705100 cifrado con llave simetrica al cliente. continuado.
+delegado 56: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1725
+Uso de CPU acumulado: 463.8000000000002
+Transacciones exitosas: 57
+delegado 57: recibio-HOLA-continuando.
+delegado 57: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 57: envio certificado del servidor. continuando.
+delegado 57: recibio y creo llave simetrica. continuando.
+delegado 57: recibio confirmacion del cliente:OK-continuado.
+delegado 57: recibio cc y clave - continuando
+delegado 57: envio valor 71907100 cifrado con llave simetrica al cliente. continuado.
+delegado 57: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1737
+Uso de CPU acumulado: 473.4000000000002
+Transacciones exitosas: 58
+delegado 58: recibio-HOLA-continuando.
+delegado 58: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 58: envio certificado del servidor. continuando.
+delegado 58: recibio y creo llave simetrica. continuando.
+delegado 58: recibio confirmacion del cliente:OK-continuado.
+delegado 58: recibio cc y clave - continuando
+delegado 58: envio valor 57248200 cifrado con llave simetrica al cliente. continuado.
+delegado 58: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1749
+Uso de CPU acumulado: 483.0000000000002
+Transacciones exitosas: 59
+delegado 59: recibio-HOLA-continuando.
+delegado 59: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 59: envio certificado del servidor. continuando.
+delegado 59: recibio y creo llave simetrica. continuando.
+delegado 59: recibio confirmacion del cliente:OK-continuado.
+delegado 59: recibio cc y clave - continuando
+delegado 59: envio valor 57162600 cifrado con llave simetrica al cliente. continuado.
+delegado 59: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1761
+Uso de CPU acumulado: 492.60000000000025
+Transacciones exitosas: 60
+delegado 60: recibio-HOLA-continuando.
+delegado 60: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 60: envio certificado del servidor. continuando.
+delegado 60: recibio y creo llave simetrica. continuando.
+delegado 60: recibio confirmacion del cliente:OK-continuado.
+delegado 60: recibio cc y clave - continuando
+delegado 60: envio valor 37472100 cifrado con llave simetrica al cliente. continuado.
+delegado 60: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1776
+Uso de CPU acumulado: 502.2000000000003
+Transacciones exitosas: 61
+delegado 61: recibio-HOLA-continuando.
+delegado 61: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA384-continuando.
+delegado 61: envio certificado del servidor. continuando.
+delegado 61: recibio y creo llave simetrica. continuando.
+delegado 61: recibio confirmacion del cliente:OK-continuado.
+delegado 61: recibio cc y clave - continuando
+delegado 61: envio valor 60734300 cifrado con llave simetrica al cliente. continuado.
+delegado 61: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1788
+Uso de CPU acumulado: 511.8000000000003
+Transacciones exitosas: 62
+delegado 62: recibio-HOLA-continuando.
+delegado 62: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 62: envio certificado del servidor. continuando.
+delegado 62: recibio y creo llave simetrica. continuando.
+delegado 62: recibio confirmacion del cliente:OK-continuado.
+delegado 62: recibio cc y clave - continuando
+delegado 62: envio valor 63906000 cifrado con llave simetrica al cliente. continuado.
+delegado 62: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1800
+Uso de CPU acumulado: 521.4000000000003
+Transacciones exitosas: 63
+delegado 63: recibio-HOLA-continuando.
+delegado 63: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 63: envio certificado del servidor. continuando.
+delegado 63: recibio y creo llave simetrica. continuando.
+delegado 63: recibio confirmacion del cliente:OK-continuado.
+delegado 63: recibio cc y clave - continuando
+delegado 63: envio valor 23931000 cifrado con llave simetrica al cliente. continuado.
+delegado 63: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1812
+Uso de CPU acumulado: 526.0000000000003
+Transacciones exitosas: 64
+delegado 64: recibio-HOLA-continuando.
+delegado 64: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 64: envio certificado del servidor. continuando.
+delegado 64: recibio y creo llave simetrica. continuando.
+delegado 64: recibio confirmacion del cliente:OK-continuado.
+delegado 64: recibio cc y clave - continuando
+delegado 64: envio valor 60043600 cifrado con llave simetrica al cliente. continuado.
+delegado 64: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1824
+Uso de CPU acumulado: 530.6000000000004
+Transacciones exitosas: 65
+delegado 65: recibio-HOLA-continuando.
+delegado 65: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 65: envio certificado del servidor. continuando.
+delegado 65: recibio y creo llave simetrica. continuando.
+delegado 65: recibio confirmacion del cliente:OK-continuado.
+delegado 65: recibio cc y clave - continuando
+delegado 65: envio valor 32193000 cifrado con llave simetrica al cliente. continuado.
+delegado 65: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1836
+Uso de CPU acumulado: 535.2000000000004
+Transacciones exitosas: 66
+delegado 66: recibio-HOLA-continuando.
+delegado 66: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 66: envio certificado del servidor. continuando.
+delegado 66: recibio y creo llave simetrica. continuando.
+delegado 66: recibio confirmacion del cliente:OK-continuado.
+delegado 66: recibio cc y clave - continuando
+delegado 66: envio valor 65489200 cifrado con llave simetrica al cliente. continuado.
+delegado 66: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1851
+Uso de CPU acumulado: 539.8000000000004
+Transacciones exitosas: 67
+delegado 67: recibio-HOLA-continuando.
+delegado 67: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 67: envio certificado del servidor. continuando.
+delegado 67: recibio y creo llave simetrica. continuando.
+delegado 67: recibio confirmacion del cliente:OK-continuado.
+delegado 67: recibio cc y clave - continuando
+delegado 67: envio valor 13999300 cifrado con llave simetrica al cliente. continuado.
+delegado 67: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1864
+Uso de CPU acumulado: 544.4000000000004
+Transacciones exitosas: 68
+delegado 68: recibio-HOLA-continuando.
+delegado 68: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 68: envio certificado del servidor. continuando.
+delegado 68: recibio y creo llave simetrica. continuando.
+delegado 68: recibio confirmacion del cliente:OK-continuado.
+delegado 68: recibio cc y clave - continuando
+delegado 68: envio valor 43395800 cifrado con llave simetrica al cliente. continuado.
+delegado 68: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1876
+Uso de CPU acumulado: 549.0000000000005
+Transacciones exitosas: 69
+delegado 69: recibio-HOLA-continuando.
+delegado 69: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 69: envio certificado del servidor. continuando.
+delegado 69: recibio y creo llave simetrica. continuando.
+delegado 69: recibio confirmacion del cliente:OK-continuado.
+delegado 69: recibio cc y clave - continuando
+delegado 69: envio valor 65268900 cifrado con llave simetrica al cliente. continuado.
+delegado 69: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1888
+Uso de CPU acumulado: 557.9000000000004
+Transacciones exitosas: 70
+delegado 70: recibio-HOLA-continuando.
+delegado 70: recibio-ALGORITMOS:AES:RSA:HMACSHA1-continuando.
+delegado 70: envio certificado del servidor. continuando.
+delegado 70: recibio y creo llave simetrica. continuando.
+delegado 70: recibio confirmacion del cliente:OK-continuado.
+delegado 70: recibio cc y clave - continuando
+delegado 70: envio valor 88370400 cifrado con llave simetrica al cliente. continuado.
+delegado 70: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1900
+Uso de CPU acumulado: 566.8000000000004
+Transacciones exitosas: 71
+delegado 71: recibio-HOLA-continuando.
+delegado 71: recibio-ALGORITMOS:AES:RSA:HMACSHA256-continuando.
+delegado 71: envio certificado del servidor. continuando.
+delegado 71: recibio y creo llave simetrica. continuando.
+delegado 71: recibio confirmacion del cliente:OK-continuado.
+delegado 71: recibio cc y clave - continuando
+delegado 71: envio valor 56519500 cifrado con llave simetrica al cliente. continuado.
+delegado 71: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1913
+Uso de CPU acumulado: 575.7000000000004
+Transacciones exitosas: 72
+delegado 72: recibio-HOLA-continuando.
+delegado 72: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 72: envio certificado del servidor. continuando.
+delegado 72: recibio y creo llave simetrica. continuando.
+delegado 72: recibio confirmacion del cliente:OK-continuado.
+delegado 72: recibio cc y clave - continuando
+delegado 72: envio valor 32063300 cifrado con llave simetrica al cliente. continuado.
+delegado 72: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1926
+Uso de CPU acumulado: 584.6000000000004
+Transacciones exitosas: 73
+delegado 73: recibio-HOLA-continuando.
+delegado 73: recibio-ALGORITMOS:AES:RSA:HMACSHA512-continuando.
+delegado 73: envio certificado del servidor. continuando.
+delegado 73: recibio y creo llave simetrica. continuando.
+delegado 73: recibio confirmacion del cliente:OK-continuado.
+delegado 73: recibio cc y clave - continuando
+delegado 73: envio valor 58797400 cifrado con llave simetrica al cliente. continuado.
+delegado 73: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1939
+Uso de CPU acumulado: 593.5000000000003
+Transacciones exitosas: 74
+delegado 74: recibio-HOLA-continuando.
+delegado 74: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA256-continuando.
+delegado 74: envio certificado del servidor. continuando.
+delegado 74: recibio y creo llave simetrica. continuando.
+delegado 74: recibio confirmacion del cliente:OK-continuado.
+delegado 74: recibio cc y clave - continuando
+delegado 74: envio valor 70697200 cifrado con llave simetrica al cliente. continuado.
+delegado 74: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1951
+Uso de CPU acumulado: 598.9000000000003
+Transacciones exitosas: 75
+delegado 75: recibio-HOLA-continuando.
+delegado 75: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 75: envio certificado del servidor. continuando.
+delegado 75: recibio y creo llave simetrica. continuando.
+delegado 75: recibio confirmacion del cliente:OK-continuado.
+delegado 75: recibio cc y clave - continuando
+delegado 75: envio valor 54167800 cifrado con llave simetrica al cliente. continuado.
+delegado 75: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1964
+Uso de CPU acumulado: 604.3000000000003
+Transacciones exitosas: 76
+delegado 76: recibio-HOLA-continuando.
+delegado 76: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA1-continuando.
+delegado 76: envio certificado del servidor. continuando.
+delegado 76: recibio y creo llave simetrica. continuando.
+delegado 76: recibio confirmacion del cliente:OK-continuado.
+delegado 76: recibio cc y clave - continuando
+delegado 76: envio valor 77038400 cifrado con llave simetrica al cliente. continuado.
+delegado 76: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1976
+Uso de CPU acumulado: 609.7000000000003
+Transacciones exitosas: 77
+delegado 77: recibio-HOLA-continuando.
+delegado 77: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 77: envio certificado del servidor. continuando.
+delegado 77: recibio y creo llave simetrica. continuando.
+delegado 77: recibio confirmacion del cliente:OK-continuado.
+delegado 77: recibio cc y clave - continuando
+delegado 77: envio valor 10754000 cifrado con llave simetrica al cliente. continuado.
+delegado 77: Terminando con errorERROR
+Tiempo de respuesta acumulado: 1988
+Uso de CPU acumulado: 615.1000000000003
+Transacciones exitosas: 78
+delegado 78: recibio-HOLA-continuando.
+delegado 78: recibio-ALGORITMOS:AES:RSA:HMACSHA384-continuando.
+delegado 78: envio certificado del servidor. continuando.
+delegado 78: recibio y creo llave simetrica. continuando.
+delegado 78: recibio confirmacion del cliente:OK-continuado.
+delegado 78: recibio cc y clave - continuando
+delegado 78: envio valor 67510400 cifrado con llave simetrica al cliente. continuado.
+delegado 78: Terminando con errorERROR
+Tiempo de respuesta acumulado: 2000
+Uso de CPU acumulado: 620.5000000000002
+Transacciones exitosas: 79
+delegado 79: recibio-HOLA-continuando.
+delegado 79: recibio-ALGORITMOS:Blowfish:RSA:HMACSHA512-continuando.
+delegado 79: envio certificado del servidor. continuando.
+delegado 79: recibio y creo llave simetrica. continuando.
+delegado 79: recibio confirmacion del cliente:OK-continuado.
+delegado 79: recibio cc y clave - continuando
+delegado 79: envio valor 55074000 cifrado con llave simetrica al cliente. continuado.
+delegado 79: Terminando con errorERROR
+Tiempo de respuesta acumulado: 2011
+Uso de CPU acumulado: 625.9000000000002
+Transacciones exitosas: 80
