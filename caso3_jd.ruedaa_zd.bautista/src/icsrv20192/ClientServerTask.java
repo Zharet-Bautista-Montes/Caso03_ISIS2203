@@ -29,10 +29,36 @@ public class ClientServerTask extends Task
 		int simalgo = (int) (Math.random()*2);
 		int hmacalgo = (int) (Math.random()*4 + 3);
 		if(gater)
-		{ C client = new C();
-		synchronized (C.class) {client.run(ha, ip, simalgo, hmacalgo);}; }
+		{ 
+			C client = new C();
+			synchronized (C.class) 
+			{
+				client.run(ha, ip, simalgo, hmacalgo);
+				try
+				{
+					client.join();
+				}
+				catch (InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			} 
+		}
 		else
-		{ UnsafeClient client = new UnsafeClient();
-		synchronized (UnsafeClient.class) {client.run(ha, ip, simalgo, hmacalgo);}; }
+		{ 
+			UnsafeClient client = new UnsafeClient();
+			synchronized (UnsafeClient.class) 
+			{
+				client.run(ha, ip, simalgo, hmacalgo);
+				try
+				{
+					client.join();
+				}
+				catch (InterruptedException e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 }

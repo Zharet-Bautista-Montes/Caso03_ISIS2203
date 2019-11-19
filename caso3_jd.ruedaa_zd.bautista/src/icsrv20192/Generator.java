@@ -23,8 +23,10 @@ public class Generator
 		System.out.println("Indique si el servidor está en modo seguro (true) o inseguro (false)");
 		swap = new Boolean(generatorconfig.next());
 		Task work = createTask(); 
-		int numberOfTasks = 80; 
-		int gapBetweenTasks = 100;
+		System.out.println("Indique el número de transacciones");
+		int numberOfTasks = generatorconfig.nextInt();
+		System.out.println("Indique el tiempo en ms entre transacciones");
+		int gapBetweenTasks = generatorconfig.nextInt();
 		generator = new LoadGenerator("Prueba de Carga Cliente-Servidor", numberOfTasks, work, gapBetweenTasks);
 		generator.generate();
 	}

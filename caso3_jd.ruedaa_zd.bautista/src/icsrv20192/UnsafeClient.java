@@ -21,7 +21,7 @@ import javax.xml.bind.DatatypeConverter;
 
 import org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory;
 
-public class UnsafeClient 
+public class UnsafeClient extends Thread
 {
 private final static String HOLA = "HOLA";
 	
